@@ -1,0 +1,720 @@
+/* Global styles */
+
+* {
+	box-sizing: border-box;
+  }
+  
+  body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+  }
+  
+  a {
+	text-decoration: none;
+	color: inherit;
+  }
+  
+  ul {
+	list-style: none;
+	padding: 0;
+  }
+  
+  img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+  }
+  
+  /* .container */
+  
+  .container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+  }
+  
+  /* Header */
+  
+  header {
+	width: 100%;
+	padding: 40px 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #FFF;
+	position: relative;
+	z-index: 1000;
+  
+	img {
+	  height: 68px;
+	}
+  
+	nav ul {
+	  display: flex;
+	  gap: 57px;
+  
+	  li {
+		list-style-type: none;
+  
+		a {
+		  font-size: 20px;
+		  font-weight: 500;
+		  color: black;
+  
+		  &:hover {
+			opacity: 0.8;
+		  }
+  
+		  &.active {
+			text-decoration: underline;
+  
+			/* Ajoute le soulignement quand le lien est actif */
+		  }
+		}
+	  }
+	}
+  }
+  
+  /* Banner */
+  
+  .banner {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 25px;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	margin-bottom: 50px;
+  
+	img {
+	  border-radius: 25px;
+	  object-fit: cover;
+	  width: 100%;
+	  height: 223px;
+	}
+  
+	h1 {
+	  position: absolute;
+	  z-index: 2;
+	  color: white;
+	  font-size: 48px;
+	  font-weight: bold;
+	  text-align: center;
+	  line-height: 1.5;
+	  margin: 0;
+	  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	}
+  }
+  
+  .banner-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	border-radius: 25px;
+  }
+  
+  /* Logement Grid */
+  
+  .logement-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+	gap: 40px;
+	padding: 60px 40px;
+	background-color: #F6F6F6;
+	border-radius: 25px;
+	margin-bottom: 50px;
+  }
+  
+  .card {
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease-in-out;
+	cursor: pointer;
+  
+	&:hover {
+	  transform: scale(1.05);
+	}
+  
+	img {
+	  width: 100%;
+	  height: 340px;
+	  object-fit: cover;
+	  transition: transform 0.3s ease-in-out;
+	}
+  }
+  
+  .card-title {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px;
+	color: #FFF;
+	font-size: 20px;
+	font-weight: 600;
+	background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.7));
+	border-radius: 0 0 10px 10px;
+	box-sizing: border-box;
+  }
+  
+  /* Footer */
+  
+  footer {
+	margin-top: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 209px;
+	gap: 30px;
+	color: rgb(255, 255, 255);
+	fill: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+	font-size: 24px;
+	font-weight: 500;
+	text-align: center;
+  }
+  
+  /* Logement */
+  
+  .logement-container {
+	max-width: 1220px;
+	margin: auto;
+	padding: 20px;
+  }
+  
+  .logement-details {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+  }
+  
+  .logement-info {
+	flex: 1;
+  
+	h1 {
+	  color: #FF6060;
+	  font-family: 'Montserrat', sans-serif;
+	  font-size: 36px;
+	  font-weight: 500;
+	  margin: 0;
+	  line-height: 1.5;
+	}
+  
+	p {
+	  margin-top: 3px;
+	}
+  }
+  
+  .logement-tags {
+	display: flex;
+	gap: 10px;
+  }
+  
+  .logement-tag {
+	background-color: #ff6060;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 12px;
+  }
+  
+  .logement-host-rating {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	gap: 5px;
+	margin-top: 5px;
+  }
+  
+  .logement-accordions {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 80px;
+	box-sizing: border-box;
+  
+	.accordion {
+	  flex: 1;
+	}
+  }
+  
+  /* Carousel */
+  
+  .carousel {
+	position: relative;
+	max-width: 100%;
+	height: 400px;
+  }
+  
+  .carousel-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 12px;
+  }
+  
+  .carousel-button {
+	position: absolute;
+	top: 50%;
+	background-color: transparent;
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+  
+	&.prev {
+	  left: 10px;
+	  font-size: 100px;
+	  position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+	}
+  
+	&.next {
+	  right: 10px;
+	  font-size: 100px;
+	  position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+	}
+  }
+  
+  .image-counter {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: white;
+	font-size: 20px;
+	background: transparent;
+	padding: 5px 10px;
+	border-radius: 5px;
+  }
+  
+  /* Rating */
+  
+  .rating {
+	display: flex;
+  }
+  
+  .star {
+	font-size: 24px;
+	margin-right: 5px;
+  }
+  
+  .filled {
+	color: #ff6060;
+  }
+  
+  .empty {
+	color: #ccc;
+  }
+  
+  /* Host */
+  
+  .host {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: right;
+	gap: 10px;
+  }
+  
+  .host-name {
+	font-size: 18px;
+	font-weight: normal;
+	color: #ff6060;
+	display: flex;
+	flex-direction: column;
+	white-space: normal;
+	max-width: 80px;
+  }
+  
+  .host-picture {
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	object-fit: cover;
+  }
+  
+  /* Accordion */
+  
+  .accordion {
+	margin-top: 1px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	border-bottom: 1px solid #e3e3e3;
+	margin-bottom: 30px;
+  }
+  
+  .accordion-title {
+	display: flex;
+	justify-content: space-between;
+	color: rgb(255, 255, 255);
+	background: #FF6060;
+	cursor: pointer;
+	padding: 0px 10px;
+	font-size: 20px;
+	transition: background-color 0.3s ease;
+	align-items: center;
+  
+	h3 {
+	  margin: 15px;
+	  font-size: 24px;
+	  font-weight: bold;
+	}
+  }
+  
+  .accordion-content {
+	padding: 0px;
+	background-color: rgb(246, 246, 246);
+	border-radius: 5px;
+	list-style: none;
+  }
+  
+  /* Icône pour ouvrir et fermer l'accordion */
+  
+  .accordion-title span {
+	font-size: 20px;
+	transition: transform 0.3s ease;
+  }
+  
+  .accordion-content {
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.5s ease;
+  
+	&.open {
+	  max-height: 1000px;
+  
+	  /* Valeur arbitraire élevée, contrôlée par JS */
+	}
+  }
+  
+  /* Classe ajoutée quand l'accordion est ouvert */
+  
+  .accordion-content-text {
+	padding: 15px 20px;
+	background-color: rgb(246, 246, 246);
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333;
+	border-top: 1px solid #e0e0e0;
+  }
+  
+  .accordion-icon {
+	width: 20px;
+	height: 20px;
+	transition: transform 0.9s ease;
+	transform: rotate(0deg);
+  
+	/* Position initiale : flèche vers le haut */
+	object-fit: contain;
+	margin-right: 15px;
+  }
+  
+  .rotate {
+	transform: rotate(180deg);
+  }
+  
+  /* About */
+  
+  .about-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 5px;
+	margin-bottom: 28px;
+  }
+  
+  .about-accordions {
+	margin-top: 12px;
+  }
+  
+  /* NotFound */
+  
+  .error_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+	margin-bottom: 140px;
+	color: #FF6060;
+	font-weight: 500;
+	text-align: center;
+  
+	.error_title {
+	  font-size: 288px;
+	  font-weight: 700;
+	  margin-top: 30px;
+	  margin-bottom: 0px;
+	}
+  
+	.error_subtitle {
+	  font-size: 36px;
+	}
+  
+	.error_link {
+	  color: rgb(0, 0, 0);
+	  font-size: 18px;
+	  text-decoration: underline;
+	}
+  }
+  
+  /* Media Queries */
+  
+  /* Media Queries pour un écran de maximum 768 pixels */
+  @media (max-width: 768px) {
+	/* Container */
+  
+	.container {
+	  max-width: 100%;
+  
+	  /* Utilise toute la largeur de l'écran */
+	  padding-left: 15px;
+  
+	  /* Réduction des marges sur les côtés */
+	  padding-right: 15px;
+	}
+  
+	/* Header */
+  
+	header {
+	  font-size: 12px;
+	  text-transform: uppercase;
+	  padding-top: 25px;
+	  padding-bottom: 25px;
+  
+	  nav ul {
+		flex-direction: row;
+		gap: 15px;
+  
+		/* Espacement réduit entre les liens du menu */
+	  }
+  
+	  img {
+		width: 145px;
+		height: 47px;
+	  }
+	}
+  
+	/* Bannière */
+  
+	.banner {
+	  margin-bottom: 25px;
+	  border-radius: 15px;
+  
+	  img {
+		height: 140px;
+  
+		/* Réduction de la hauteur de la bannière */
+		border-radius: 15px;
+	  }
+	}
+  
+	.banner-overlay {
+	  border-radius: 15px;
+	}
+  
+	.banner h1 {
+	  font-size: 30px;
+  
+	  /* Réduction de la taille du texte de la bannière */
+	  text-align: left;
+	  margin-left: 15px;
+	  line-height: 1.2;
+	}
+  
+	/* Logement Grid */
+  
+	.logement-grid {
+	  grid-template-columns: 1fr;
+  
+	  /* Une seule colonne sur petits écrans */
+	  gap: 20px;
+  
+	  /* Réduction de l'espace entre les cartes */
+	  padding: 0px;
+  
+	  /* Moins de padding autour de la grille */
+	  background-color: white;
+	}
+  
+	.card img {
+	  height: 220px;
+  
+	  /* Réduction de la hauteur des images de logement */
+	}
+  
+	.card-title {
+	  font-size: 16px;
+  
+	  /* Réduction de la taille des titres des cartes */
+	}
+  
+	/* Logement : détails */
+  
+	.logement-details {
+	  flex-direction: column;
+  
+	  /* Affichage en colonne sur mobile */
+	  gap: 20px;
+	}
+  
+	.logement-info h1 {
+	  font-size: 24px;
+  
+	  /* Taille réduite du titre du logement */
+	}
+  
+	/* Tags */
+  
+	.logement-tags {
+	  flex-wrap: wrap;
+  
+	  /* Les tags passent à la ligne si nécessaire */
+	  gap: 5px;
+  
+	  /* Réduction de l'espace entre les tags */
+	}
+  
+	/* Hôte */
+  
+	.logement-host-rating {
+	  flex-direction: row;
+  
+	  /* Les éléments seront sur une même ligne */
+	  justify-content: space-between;
+  
+	  /* Espace entre les étoiles et l'hôte */
+	  align-items: center;
+  
+	  /* Centrage vertical des éléments */
+	}
+  
+	.stars {
+	  order: 1;
+  
+	  /* Assure que les étoiles sont à gauche */
+	  flex: 1;
+  
+	  /* Les étoiles prennent l'espace disponible à gauche */
+	}
+  
+	.host {
+	  order: 2;
+  
+	  /* L'hôte est à droite */
+	  display: flex;
+	  flex-direction: row;
+  
+	  /* Aligne la photo et le nom en ligne */
+	  align-items: center;
+  
+	  /* Centre la photo et le texte verticalement */
+	  gap: 10px;
+  
+	  /* Espace entre la photo et le nom */
+	}
+  
+	/* Accordéons */
+  
+	.logement-accordions {
+	  flex-direction: column;
+  
+	  /* Les accordéons s'affichent l'un sous l'autre */
+	  gap: 10px;
+  
+	  /* Réduction de l'espace entre les accordéons */
+  
+	  align-items: normal;
+	}
+  
+	.accordion-title {
+	  font-size: 18px;
+  
+	  /* Taille réduite du titre de l'accordion */
+	  padding: 10px;
+  
+	  /* Moins de padding pour économiser l'espace */
+	}
+  
+	/* Carousel */
+  
+	.carousel {
+	  height: 300px;
+  
+	  /* Réduction de la hauteur du carrousel */
+	}
+  
+	.carousel-button {
+	  &.prev {
+		font-size: 30px;
+  
+		/* Taille réduite des flèches du carrousel */
+	  }
+  
+	  &.next {
+		font-size: 30px;
+	  }
+	}
+  
+	/* About */
+  
+	.about-container {
+	  max-width: 100%;
+  
+	  /* Utilise toute la largeur de l'écran */
+	  padding-left: 15px;
+  
+	  /* Réduction des marges sur les côtés */
+	  padding-right: 15px;
+	}
+  
+	/* Footer */
+  
+	footer {
+	  font-size: 18px;
+  
+	  /* Taille réduite du texte du footer */
+	  gap: 15px;
+	  padding: 20px 0;
+  
+	  /* Réduction de la hauteur du footer */
+	  margin-top: -16px;
+	}
+  
+	/* Page 404 */
+  
+	.error_container {
+	  .error_title {
+		font-size: 144px;
+  
+		/* Réduction de la taille du titre d'erreur */
+	  }
+  
+	  .error_subtitle {
+		font-size: 24px;
+  
+		/* Réduction de la taille du sous-titre */
+	  }
+  
+	  .error_link {
+		font-size: 16px;
+  
+		/* Taille réduite du lien de retour */
+	  }
+  
+	  margin-bottom: 250px;
+	}
+  }
+  
